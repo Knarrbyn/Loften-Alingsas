@@ -1,0 +1,138 @@
+---
+import loften from '../data/loften-demo.json';
+
+const nivaText = {
+  1: 'Eget lokalt program',
+  2: 'Lokala utspel',
+  3: 'Endast nationellt program',
+  4: 'Inget hittat ännu',
+};
+---
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vallöftesgranskaren — utveckling</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <p class="eyebrow">Vallöftesgranskaren · lokal utvecklingsmiljö</p>
+      <h1>Vad kostar Alingsås vallöften?</h1>
+      <p class="sub">Neutral, källspårad granskning av kommunala vallöften inför valet 13 september 2026. Data läses från <code>src/data/loften-demo.json</code> — byt ut mot pipeline-output när den är klar.</p>
+    </header>
+
+    <div class="notice">
+      <strong>Det här är en lokal utvecklingsversion</strong>, inte den automatiserade pipelinen. Datan i denna sida är handskriven i JSON-filen, inte hämtad av `fetch`/`extract`-stegen ännu.
+    </div>
+
+    <section class="list">
+      {loften.map((l) => (
+        <article class="card">
+          <div class:list={["pristag", { omojlig: l.pris.konfidens === 'ej_mojlig' }]}>
+            {l.pris.konfidens === 'ej_mojlig' ? (
+              <>
+                <div class="belopp">Ej möjligt att uppskatta</div>
+                <div class="konfidens">Väntar på underlag</div>
+              </>
+            ) : (
+              <>
+                <div class="belopp">≈ {l.pris.belopp_mkr_per_ar} mkr/år</div>
+                <div class="konfidens">{l.pris.konfidens}</div>
+              </>
+            )}
+          </div>
+          <div class="card-head">
+            <span class={`chip ${l.parti}`}>{l.parti.toUpperCase()}</span>
+            <span class="kategori">{l.kategori}</span>
+          </div>
+          <blockquote class="citat">"{l.quote}"</blockquote>
+          <div class="grid-two">
+            <div class="konsekvens">
+              <h4>Konsekvens för verksamheten</h4>
+              <p>{l.konsekvenser.verksamhet.text}</p>
+            </div>
+            <div class="konsekvens">
+              <h4>Konsekvens för medborgarna</h4>
+              <p>{l.konsekvenser.medborgare.text}</p>
+            </div>
+          </div>
+          {l.pris.grund.length > 0 && (
+            <div class="grund">Grund: {l.pris.grund.join(' · ')}</div>
+          )}
+        </article>
+      ))}
+    </section>
+
+    <div class="kalltackning">
+      <h2>Källtäckning</h2>
+      <table class="tackning">
+        <thead>
+          <tr><th>Nivå</th><th>Betydelse</th></tr>
+        </thead>
+        <tbody>
+          {Object.entries(nivaText).map(([niva, text]) => (
+            <tr>
+              <td><span class={`niva-badge niva-${niva}`}>{niva}</span></td>
+              <td>{text}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+
+<style>
+  :root {
+    --ink: #16233D;
+    --ink-soft: #3C4A66;
+    --paper: #F1F1EC;
+    --paper-raised: #FAFAF6;
+    --line: #D8D8CE;
+    --gold: #96702B;
+    --gold-soft: #F1E6D2;
+    --green-muted: #4C7A3E;
+    --gray-chip: #6B6B62;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Iowan Old Style", Georgia, serif; line-height: 1.5; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 24px 96px; }
+  header.top { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 8px; }
+  .eyebrow { font-family: "SF Mono", Menlo, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+  h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 700; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; color: var(--ink-soft); font-size: 16px; max-width: 60ch; margin: 10px 0 0; }
+  .sub code { background: var(--paper-raised); padding: 1px 5px; border-radius: 3px; }
+  .notice { margin-top: 28px; padding: 16px 20px; background: var(--paper-raised); border-left: 3px solid var(--gold); font-family: -apple-system, sans-serif; font-size: 14.5px; color: var(--ink-soft); }
+  .notice strong { color: var(--ink); }
+  section.list { margin-top: 48px; }
+  .card { position: relative; background: var(--paper-raised); border: 1px solid var(--line); border-radius: 3px; padding: 28px; margin-bottom: 28px; }
+  .card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .chip { font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.03em; padding: 4px 10px; border-radius: 20px; color: #fff; }
+  .chip.mp { background: var(--green-muted); }
+  .kategori { font-family: -apple-system, sans-serif; font-size: 12.5px; color: var(--ink-soft); }
+  blockquote.citat { margin: 0 0 20px; padding: 2px 0 2px 20px; border-left: 2px solid var(--line); font-size: 19px; font-style: italic; }
+  .grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .konsekvens h4 { font-family: -apple-system, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-chip); margin: 0 0 6px; }
+  .konsekvens p { font-family: -apple-system, sans-serif; font-size: 14.5px; color: var(--ink-soft); margin: 0; }
+  .pristag { position: absolute; top: 22px; right: -6px; background: var(--gold-soft); border: 1px dashed var(--gold); border-radius: 4px; padding: 8px 16px 8px 20px; text-align: right; max-width: 220px; }
+  .pristag.omojlig { background: #ECECE4; border-color: #A9A99A; }
+  .pristag .belopp { font-family: "SF Mono", Menlo, monospace; font-size: 20px; font-weight: 700; white-space: nowrap; }
+  .pristag.omojlig .belopp { font-size: 13px; font-weight: 600; color: var(--gray-chip); font-family: -apple-system, sans-serif; }
+  .pristag .konfidens { font-family: -apple-system, sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold); margin-top: 2px; }
+  .pristag.omojlig .konfidens { color: var(--gray-chip); }
+  .grund { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-family: -apple-system, sans-serif; font-size: 12.5px; color: var(--gray-chip); }
+  .kalltackning { margin-top: 56px; padding-top: 24px; border-top: 2px solid var(--ink); }
+  .kalltackning h2 { font-size: 20px; margin: 0 0 16px; }
+  table.tackning { width: 100%; border-collapse: collapse; font-family: -apple-system, sans-serif; font-size: 13.5px; }
+  table.tackning th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-chip); padding: 6px 10px 6px 0; border-bottom: 1px solid var(--ink); }
+  table.tackning td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+  .niva-badge { display: inline-block; width: 20px; height: 20px; border-radius: 50%; font-size: 11px; text-align: center; line-height: 20px; font-family: "SF Mono", monospace; color: #fff; }
+  .niva-1 { background: var(--green-muted); }
+  .niva-2 { background: var(--gold); }
+  .niva-3 { background: #97876B; }
+  .niva-4 { background: var(--gray-chip); }
+  @media (max-width: 640px) { .grid-two { grid-template-columns: 1fr; } }
+</style>
