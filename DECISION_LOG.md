@@ -55,3 +55,23 @@ av samma neutralitetsskäl som R6 (annars straffas partier som skriver konkret).
   KPI-id:n för respektive löfteskategori (kulturskola, hemtjänst, cykelvägar m.m.) ska väljas
   EFTER att extract-steget körts mot samtliga partiers manifest — inte i förväg.
 - **Permanent namn/domän** — ej beslutat, arbetsnamn "Vallöftesgranskaren" används tills vidare.
+
+---
+
+## 2026-08-18 (kväll) — Lokal utvecklingsmiljö, andra MP-dokument mottaget
+
+**Astro-sajten scaffoldad** i `site/`-undermappen (medvetet separerad från pipelinens `src/`
+i repo-roten för att undvika namnkrock). Byggd och verifierad lokalt (`npm run build` OK)
+innan push. Renderar `site/src/data/loften-demo.json` — handskriven demodata, inte
+pipeline-output. Byt ut mot riktig data när `publish`-steget finns.
+
+**Andra MP-dokument mottaget:** en broschyr ("Ett tryggt och hållbart Alingsås",
+kandidater Thomas Martinsson, Janine Alm Ericson, Jenny Hellsten) med annan rubrikstruktur
+(Klimat och miljö / Demokrati och mänskliga rättigheter / Välfärd, gemenskap och trygghet)
+än det tidigare uppladdade manifestet ("Alingsås vinner på grön politik"). INTE bekräftat
+som identiskt innehåll — loggas som en möjlig andra lokal källa, inte sammanslaget med det
+första dokumentet utan vidare granskning. Extraktion av löften ur detta dokument är inte
+gjord än.
+
+**Nästa steg:** ägaren sätter upp lokal utvecklingsmiljö (Node.js, git clone, npm install,
+npm run dev) för att kunna se ändringar live på egen dator.
