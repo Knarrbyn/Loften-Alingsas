@@ -1,0 +1,74 @@
+[
+  {
+    "id": "l-2026-mp-0001",
+    "parti": "mp",
+    "titel": "Kostnadsfri kulturskola",
+    "quote": "Som ung i kulturskolan har du rätt till kostnadsfri undervisning.",
+    "kategori": "barn-utbildning",
+    "kalla_niva": 1,
+    "source": {
+      "dokument_typ": "lokalt_program",
+      "beskrivning": "Alingsås vinner på grön politik — Valmanifest 2026, Miljöpartiet de gröna Alingsås"
+    },
+    "pris": {
+      "belopp_mkr_per_ar": 2.3,
+      "konfidens": "nyckeltal",
+      "grund": [
+        "985 kr/termin × 1190 elever × 2 terminer (Alingsås kommun, Taxor och avgifter 2026 för kultur- och utbildningsnämnden, KF 2026-02-25 §41)",
+        "elevantal enligt Kulturrådets statistik (Newsworthy 2025)"
+      ]
+    },
+    "konsekvenser": {
+      "verksamhet": {
+        "text": "Bortfall av avgiftsintäkter till kultur- och utbildningsnämnden motsvarande ca 2,3 mkr/år; ingen förändring av personalbehov.",
+        "konfidens": "medel"
+      },
+      "medborgare": {
+        "text": "Berör de cirka 1 190 barn och unga som redan går på kulturskolan, samt de 286 som står i kö.",
+        "konfidens": "hog"
+      }
+    }
+  },
+  {
+    "id": "l-2026-mp-0002",
+    "parti": "mp",
+    "titel": "Subventionerat fritidskort",
+    "quote": "Som ung i Alingsås har du rätt till ett subventionerat fritidskort under sommaren.",
+    "kategori": "kultur-fritid",
+    "kalla_niva": 1,
+    "source": {
+      "dokument_typ": "lokalt_program",
+      "beskrivning": "Alingsås vinner på grön politik — Valmanifest 2026, Miljöpartiet de gröna Alingsås"
+    },
+    "pris": {
+      "belopp_mkr_per_ar": null,
+      "konfidens": "ej_mojlig",
+      "grund": []
+    },
+    "konsekvenser": {
+      "verksamhet": { "text": "Ej möjligt att uppskatta ännu — löftet anger ingen målgruppsstorlek eller subventionsnivå.", "konfidens": null },
+      "medborgare": { "text": "Ej möjligt att uppskatta ännu.", "konfidens": null }
+    }
+  },
+  {
+    "id": "l-2026-mp-0003",
+    "parti": "mp",
+    "titel": "Biblioteksfilial i Ingared",
+    "quote": "Som boende i Ingared har du rätt till en ändamålsenlig biblioteksfilial snarast möjligt.",
+    "kategori": "kultur-fritid",
+    "kalla_niva": 1,
+    "source": {
+      "dokument_typ": "lokalt_program",
+      "beskrivning": "Alingsås vinner på grön politik — Valmanifest 2026, Miljöpartiet de gröna Alingsås"
+    },
+    "pris": {
+      "belopp_mkr_per_ar": null,
+      "konfidens": "ej_mojlig",
+      "grund": []
+    },
+    "konsekvenser": {
+      "verksamhet": { "text": "Ej möjligt att uppskatta ännu — löftestexten anger varken lokalstorlek eller tidsplan.", "konfidens": null },
+      "medborgare": { "text": "Skulle beröra boende i Ingared specifikt, till skillnad från kommuntäckande löften.", "konfidens": null }
+    }
+  }
+]
