@@ -126,3 +126,32 @@ flera riktiga exempel innan automatisering, se pipeline-README.md).
 **Öppen fråga:** med nu två strukturellt olika verkliga källor (MP + V) i handen är det
 läge att överväga om nästa steg ska vara fler manuella enskilda extraktioner, eller att
 börja bygga den riktiga `extract`-pipeline-koden och testa den mot båda formaten samtidigt.
+
+---
+
+## 2026-08-19 (kväll) — SD uppgraderad till nivå 1: första explicit prissatta löftena
+
+**Källa:** "SD Alingsås Budget för 2025 med plan för 2026 och 2027" (PDF), länkad från
+`sd.se/alingsas/vad-vi-vill/` under "Övriga dokument". Uppgraderar SD från nivå 2 till
+**nivå 1**.
+
+**Genombrott:** dokumentet innehåller FYRA explicit prissatta poster — första gången
+projektet har `pris.konfidens: "explicit"` istället för uppskattning. Exempel tillagt i
+`site/src/data/loften-demo.json`: 30 mnkr/år permanent ramökning till Barn- och
+ungdomsnämnden. Övriga tre (5 mnkr Tekniska nämnden, 4,5 mnkr Vård- och omsorgsnämnden
+"i årets budget", 10 mnkr AME/Socialnämnden) ej tillagda i demo än, men dokumenterade här
+för framtida extraktion.
+
+**Viktig nyans (aldrig hitta på-principen):** dokumentet är daterat som budgetförslag 2025,
+INTE ett omdöpt "Valmanifest 2026". Räknas som nivå 1 (eget lokalt program) enligt
+källhierarkin eftersom det är SD:s egna, aktuella politiska ställningstaganden — men bör
+dubbelkollas mot ett eventuellt nyare/uppdaterat dokument vid omsökning 2026-09-01.
+"4,5 mnkr... i årets budget" är dessutom oklart om det är en engångssatsning eller
+återkommande — INTE antaget som `_per_ar` utan vidare verifiering.
+
+**Cross-projekt-fynd (för FAKTAGRANSKAREN, inte detta projekt):** samma SD-sida länkar till
+flera formella kommunala dokument som troligen redan finns i Faktagranskarens dataset —
+motioner, ett initiativärende, en reservation (KF 24-11-06), en protokollsanteckning, och
+en **"Fråga till vård och äldre"** som mycket väl kan vara den "enkla fråga" Faktagranskaren-
+specen (§9) sökt efter men aldrig hittat exempel på. Bör kollas i Faktagranskaren-tråden,
+inte här.
