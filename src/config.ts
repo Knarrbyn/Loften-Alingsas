@@ -72,10 +72,7 @@ export const PARTIER: PartiConfig[] = [
     anteckning: "Nationellt manifest finns. Lokalt bara odokumenterade medborgardialog-möten.",
   },
   {
-    kod: "v",
-    namn: "Vänsterpartiet",
-    kalla_niva: 1,
-    kalla_url: null,
+    kalla_url: "https://alingsas.vansterpartiet.se/valet-2026/valplattform/",
     kalla_typ: "lokalt_program",
     senast_sokt: "2026-08-19",
     anteckning:
