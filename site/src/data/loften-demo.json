@@ -97,5 +97,65 @@
         "konfidens": "hog"
       }
     }
+  },
+  {
+    "id": "l-2026-v-0001",
+    "parti": "v",
+    "titel": "Gratis skolfrukost i alla grundskolor",
+    "quote": "Inför gratis skolfrukost i alla grundskolor i Alingsås.",
+    "kategori": "barn-utbildning",
+    "kalla_niva": 1,
+    "source": {
+      "dokument_typ": "lokalt_program",
+      "beskrivning": "Vänsterpartiet Alingsås Valplattform 2026"
+    },
+    "pris": {
+      "belopp_mkr_per_ar": 1.8,
+      "konfidens": "nedskalat",
+      "grund": [
+        "Metod från Tyresö kommuns egen utredning av identiskt förslag (svar på motion om kostnadsfri skolfrukost): 15 kr/portion inkl. personal, antagande 10–15% av eleverna nyttjar erbjudandet, 178 skoldagar/läsår.",
+        "Skalat mot Alingsås 5 402 grundskoleelever (källa: Skolkollen/Skolverket) — ger ett spann på ca 1,4–2,2 mkr/år, mittpunkt 1,8 mkr/år visas här."
+      ]
+    },
+    "konsekvenser": {
+      "verksamhet": {
+        "text": "Kräver utökad måltidsverksamhet och sannolikt mer personaltid vid frukost, utöver den ordinarie skollunchen.",
+        "konfidens": "medel"
+      },
+      "medborgare": {
+        "text": "Berör samtliga elever i kommunens 20 grundskolor, i praktiken främst de som nyttjar erbjudandet.",
+        "konfidens": "medel"
+      }
+    }
+  },
+  {
+    "id": "l-2026-v-0002",
+    "parti": "v",
+    "titel": "Utökad fältgrupp med två fältassistenter",
+    "quote": "Utöka fältgruppen med minst två fältassistenter.",
+    "kategori": "vård-omsorg",
+    "kalla_niva": 1,
+    "source": {
+      "dokument_typ": "lokalt_program",
+      "beskrivning": "Vänsterpartiet Alingsås Valplattform 2026"
+    },
+    "pris": {
+      "belopp_mkr_per_ar": 1.4,
+      "konfidens": "nyckeltal",
+      "grund": [
+        "SCB:s lönestatistik 2026: medellön fältassistent 40 300 kr/månad.",
+        "Schablon 1,4× bruttolön för arbetsgivaravgift och kringkostnader (vanlig tumregel för kommunal sektor) ≈ 700 000 kr/år per tjänst × 2 tjänster ≈ 1,4 mkr/år."
+      ]
+    },
+    "konsekvenser": {
+      "verksamhet": {
+        "text": "Utökar det brottsförebyggande fältarbetet inom socialtjänsten med två heltidstjänster.",
+        "konfidens": "hog"
+      },
+      "medborgare": {
+        "text": "Berör i första hand ungdomar och familjer i kontakt med fältgruppens uppsökande verksamhet.",
+        "konfidens": "medel"
+      }
+    }
   }
 ]
