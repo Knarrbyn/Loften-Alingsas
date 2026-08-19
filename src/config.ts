@@ -39,11 +39,19 @@ export const PARTIER: PartiConfig[] = [
   {
     kod: "sd",
     namn: "Sverigedemokraterna",
-    kalla_niva: 2,
-    kalla_url: "https://sd.se/alingsas",
-    kalla_typ: "lokalt_utspel",
-    senast_sokt: "2026-08-18",
-    anteckning: "Löpande textsida med lokala sakförslag. Ingen PDF, ej tydligt daterad till 2026 — verifiera vid extraktion.",
+    kalla_niva: 1,
+    kalla_url: "https://www.sd.se/alingsas/vad-vi-vill/",
+    kalla_typ: "lokalt_program",
+    senast_sokt: "2026-08-19",
+    anteckning:
+      "'SD Alingsås Budget för 2025 med plan för 2026 och 2027' (PDF, länkad från lokala sidans " +
+      "'Övriga dokument') innehåller FYRA explicit prissatta poster — högsta konfidensnivån i " +
+      "prissättningsstegen (§4.2 nivå 1 'explicit'), första exemplet i projektet. Notera: dokumentet " +
+      "är daterat som budgetförslag 2025, inte ett omdöpt 'Valmanifest 2026' — räknas ändå som " +
+      "nivå 1 (eget lokalt program) men bör dubbelkollas mot ett eventuellt nyare dokument vid " +
+      "omsökning 2026-09-01. Sidan länkar även till formella kommunala dokument (motioner, " +
+      "initiativärenden, en 'enkel fråga') som troligen redan finns i Faktagranskarens dataset — " +
+      "se DECISION_LOG.md.",
   },
   {
     kod: "c",
