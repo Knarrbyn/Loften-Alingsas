@@ -66,11 +66,15 @@ export const PARTIER: PartiConfig[] = [
   {
     kod: "v",
     namn: "Vänsterpartiet",
-    kalla_niva: 3,
+    kalla_niva: 1,
     kalla_url: null,
-    kalla_typ: "nationellt_program",
-    senast_sokt: "2026-08-18",
-    anteckning: "Regional VG-valplattform nämner Alingsås en gång (spårutbyggnad). Inget separat kommunalt program.",
+    kalla_typ: "lokalt_program",
+    senast_sokt: "2026-08-19",
+    anteckning:
+      "Egen lokal 'Vänsterpartiet Alingsås Valplattform 2026' mottagen som uppladdad PDF 2026-08-19. " +
+      "Strukturerad i tydliga teman (Vi stärker välfärden / Trygga bostäder åt alla / Alingsås bästa " +
+      "arbetsgivare / Social hållbarhet / Ett rödgrönt Alingsås) med explicita 'Våra skarpaste " +
+      "förslag'-listor per tema — mer extraktionsvänligt format än MP:s rättighetsformulering.",
   },
   {
     kod: "m",
