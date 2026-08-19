@@ -100,3 +100,29 @@ fysisk insamling är en rimlig, tidsmässigt välplacerad metod inför omsöknin
 
 **Konsekvens för SPEC:** `VALLOFTESGRANSKAREN-SPEC.md` bör uppdateras med denna hybrid-
 insamlingsmodell vid nästa spec-revision (ej gjort ännu — dokumenterat här under tiden).
+
+---
+
+## 2026-08-19 — V uppgraderad till nivå 1: riktig lokal valplattform mottagen
+
+**Källa:** "Vänsterpartiet Alingsås Valplattform 2026" (PDF), mottagen som uppladdning.
+Uppgraderar V från nivå 3 (bara regional/nationell) till **nivå 1** (eget lokalt program).
+
+**Formatobservation:** till skillnad från MP:s rättighetsformulerade manifest ("Som [roll]
+har du rätt till...") är V:s dokument strukturerat med explicita rubriker per tema och
+punktlistor under "Våra skarpaste [tema]förslag". Betydligt mer direkt extraherbart —
+värdefullt referensexempel när extract-prompten designas, eftersom pipelinen nu har två
+genuint olika verkliga format att testas mot (jfr Faktagranskarens princip att testa mot
+flera riktiga exempel innan automatisering, se pipeline-README.md).
+
+**R7-konkretionsfilter tillämpat manuellt (exempel, ej uttömmande):**
+- Konkreta (skulle bli löftesposter): "Inför gratis skolfrukost i alla grundskolor i
+  Alingsås", "Höj bidragen till Kvinno- och Tjejjouren Olivia", "Utöka fältgruppen med
+  minst två fältassistenter", "Inga utförsäljningar av Alingsåshems lägenheter"
+- Gränsfall: "Frysa hyrorna" — konkret åtgärd men utan tidsram/nivå angiven
+- För vaga för prissättning: "Satsa på den psykosociala och fysiska arbetsmiljön",
+  "Stärka möjligheterna till kompetensutveckling för kommunens personal"
+
+**Öppen fråga:** med nu två strukturellt olika verkliga källor (MP + V) i handen är det
+läge att överväga om nästa steg ska vara fler manuella enskilda extraktioner, eller att
+börja bygga den riktiga `extract`-pipeline-koden och testa den mot båda formaten samtidigt.
