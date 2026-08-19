@@ -75,3 +75,28 @@ gjord än.
 
 **Nästa steg:** ägaren sätter upp lokal utvecklingsmiljö (Node.js, git clone, npm install,
 npm run dev) för att kunna se ändringar live på egen dator.
+
+---
+
+## 2026-08-19 — Arkitekturbeslut: fetch-steget är delvis manuellt för detta projekt
+
+**Fynd:** `moderaternaalingsas.se` blockerar automatiserad åtkomst (robots.txt). Detta är
+inte ett tillfälligt sandbox-hinder utan gäller den skarpa pipelinen också — `fetch`-steget
+kan aldrig skrapa den sidan, oavsett var koden körs.
+
+**Beslut:** till skillnad från Faktagranskaren (helautomatisk `fetch` mot MeetingPlus) blir
+källinsamlingen för det här projektet medvetet HYBRID:
+- Digitalt tillgängliga källor (S:s PDF-manifest, eventuella framtida publicerade program)
+  hämtas automatiskt när möjligt.
+- Källor som blockerar skrapning, eller bara finns fysiskt (broschyrer från valstugor),
+  samlas MANUELLT av ägaren — fotograferas och laddas upp, transkriberas sedan med samma
+  verbatim-disciplin som digitala källor. Detta är inte en kvalitetsförsämring: samma
+  verbatimgrind (R2) och källhierarki (§2.2) gäller oavsett hur texten kom in i systemet.
+
+**Praktisk info:** Alingsås kommun flyttar torghandeln tillfälligt till Kungsgatan för att
+göra plats för valstugor på Stora Torgets östra sida inför valet 2026-09-13 — bekräftar att
+fysisk insamling är en rimlig, tidsmässigt välplacerad metod inför omsökningsdatumet
+2026-09-01. V har dessutom en "Valhubb" på Norra Strömgatan 9, Alingsås.
+
+**Konsekvens för SPEC:** `VALLOFTESGRANSKAREN-SPEC.md` bör uppdateras med denna hybrid-
+insamlingsmodell vid nästa spec-revision (ej gjort ännu — dokumenterat här under tiden).
