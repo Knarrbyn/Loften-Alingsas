@@ -70,5 +70,32 @@
       "verksamhet": { "text": "Ej möjligt att uppskatta ännu — löftestexten anger varken lokalstorlek eller tidsplan.", "konfidens": null },
       "medborgare": { "text": "Skulle beröra boende i Ingared specifikt, till skillnad från kommuntäckande löften.", "konfidens": null }
     }
+  },
+  {
+    "id": "l-2026-sd-0001",
+    "parti": "sd",
+    "titel": "Permanent ramökning till Barn- och ungdomsnämnden",
+    "quote": "Därför ställer vi oss bakom 30 mnkr i permanent ramökning till Barn- och ungdomsnämnden.",
+    "kategori": "barn-utbildning",
+    "kalla_niva": 1,
+    "source": {
+      "dokument_typ": "lokalt_program",
+      "beskrivning": "SD Alingsås budgetförslag 2025 med plan för 2026 och 2027"
+    },
+    "pris": {
+      "belopp_mkr_per_ar": 30,
+      "konfidens": "explicit",
+      "grund": ["Beloppet anges direkt i källdokumentet, ingen uppskattning krävd."]
+    },
+    "konsekvenser": {
+      "verksamhet": {
+        "text": "Permanent höjd budgetram för Barn- och ungdomsnämnden — ökat handlingsutrymme, t.ex. för minskade barngruppsstorlekar.",
+        "konfidens": "hog"
+      },
+      "medborgare": {
+        "text": "Berör barn och elever inom nämndens verksamheter samt personalen där.",
+        "konfidens": "hog"
+      }
+    }
   }
 ]
